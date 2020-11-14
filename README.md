@@ -1,4 +1,4 @@
 # React Native Animated Onboarding Screens
 
 
-![Alt text](onboardindDemo.gif)
+![Alt text](src/public/onboardindDemo.gif)
