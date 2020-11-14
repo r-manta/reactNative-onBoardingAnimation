@@ -1,13 +1,14 @@
 # React Native Onboarding 
 
-1. Clone the repo
+###  Clone the repo
+
 
 ```
 git clone git@github.com:r-manta/reactNative-onBoardingAnimation.git
 ```
 
 
-2. Installation
+### Installation
 
 Using npm:
 
@@ -22,7 +23,7 @@ yarn install
 ```
 
 
-3. Have Fun
+###  Have Fun
 
 
 <img src="src/public/onboardindDemo.gif"  height="400">
