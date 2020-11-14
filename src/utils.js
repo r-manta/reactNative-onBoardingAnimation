@@ -1,12 +1,20 @@
+import img1 from './public/1.png'
+import img2 from './public/2.png'
+import img3 from './public/3.png'
+import img4 from './public/4.png'
+
+
 export const JSON = [
-    { img: 'https://picsum.photos/id/1037/200/300', label: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { img: 'https://picsum.photos/id/1043/200/300', label: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ' },
-    { img: 'https://picsum.photos/id/1063/200/300', label: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.' }
+    { img: img1, title: 'The Critical Ingredient', label: "The critical ingredient is getting off your butt and doing something. It's as simple as that. A lot of people have ideas, but there are few who decide to do something about them now. Not tomorrow. Not next week. But today." },
+    { img: img2, title: 'Just get started', label: "The secret of getting ahead is getting started. The secret of getting started is breaking your complex overwhelming tasks into smaller manageable tasks, and then starting on the first one." },
+    { img: img3, title: 'Doing Great Work', label: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do." },
+    { img: img4, title: '', label: '' }
 ]
 
 export const colors = [
-    { background: '#F5F3F1', circle: '#C0D8C5', icon: '#F5F3F1' },
-    { background: '#C0D8C5', circle: '#8C2029', icon: '#C0D8C5' },
-    { background: '#8C2029', circle: '#F5F3F1', icon: '#2A5655' },
+    { background: '#393e46', circle: '#f18c8e', icon: '#fff', textColor: '#fff' },
+    { background: '#f18c8e', circle: '#c8e6f5', icon: '#393e46', textColor: '#393e46' },
+    { background: '#c8e6f5', circle: '#F5F3F1', icon: '#f18c8e', textColor: '#1a3b86' },
+    { background: '#fff', textColor: '#393e46' }
 
 ]

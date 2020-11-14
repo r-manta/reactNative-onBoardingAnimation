@@ -15,7 +15,6 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
     sliderContainer: {
         flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
     },
@@ -25,37 +24,40 @@ export default function Slider(props) {
 
     const {
         index,
-        direction,
+        textColor,
         silderAnimatedController,
     } = props
 
     const translateX = silderAnimatedController.interpolate({
-        inputRange: [0, 1, 2],
-        outputRange: [width, -1, -width]
+        inputRange: [...Array(JSON.length).keys()],
+        outputRange: JSON.map((_, i) => -i * width)
     })
 
 
     return (
         <Animated.View style={[
             styles.sliderContainer,
+            { position: 'relative' },
             { transform: [{ translateX: translateX }] }
         ]}>
 
-            {JSON.map(({ img, label }, index) => {
+            {JSON.map(({ img, title, label, }, index) => {
                 return (
-                    <View key={index}
-                        style={{ flexDirection: 'column', alignItems: 'center', }}
-                    >
-                        <Image
-                            style={{
-                                width: 150,
-                                height: 150,
-                                borderRadius: 14
-                            }}
-                            source={{ uri: img }}
-                            resize={'cover'}
-                        />
-                        <Text style={{ padding: 20, textAlign: 'center', fontSize: 16 }}>{label}</Text>
+                    <View key={index} style={{ flexDirection: 'column', width: width }}>
+                        <View style={{ flexShrink: 1 }}>
+                            <Image
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                                source={img}
+                                resize={'cover'}
+                            />
+                        </View>
+                        <View style={{ padding: 20, textAlign: 'left', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <Animated.Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10, color: textColor }}>{title}</Animated.Text>
+                            <Animated.Text style={{ fontSize: 16, color: textColor }}>{label}</Animated.Text>
+                        </View>
 
                     </View>
                 )

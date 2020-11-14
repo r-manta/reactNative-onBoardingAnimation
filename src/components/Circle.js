@@ -19,16 +19,16 @@ const styles = StyleSheet.create({
     circleContainer: {
         justifyContent: 'flex-end',
         alignItems: 'center',
-        paddingBottom: 50
+        paddingBottom: 20
     },
     circle: {
-        width: 100,
-        height: 100,
+        width: 60,
+        height: 60,
         borderRadius: 50,
     },
     iconContainer: {
-        width: 100,
-        height: 100,
+        width: 60,
+        height: 60,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -39,7 +39,6 @@ export default function Circle(props) {
     const {
         onPress,
         index,
-        direction,
         circleAnimatedController,
         backgroundAnimatedController
     } = props
@@ -48,7 +47,7 @@ export default function Circle(props) {
 
     const scale = circleAnimatedController.interpolate({
         inputRange: [0, 0.5, 1],
-        outputRange: [1, 6, 1],
+        outputRange: [1, 20, 1],
     })
 
     const rotateY = circleAnimatedController.interpolate({
@@ -95,7 +94,7 @@ export default function Circle(props) {
                             },
                             { opacity: opacity }
                         ]}>
-                            <Arrow name={direction === 'forward' ? 'angle-right' : 'angle-left'} size={25} style={{ color: iconColor }} />
+                            <Arrow name={'angle-right'} size={25} style={{ color: iconColor }} />
                         </Animated.View>
                     </Animated.View>
                 </Animated.View>
