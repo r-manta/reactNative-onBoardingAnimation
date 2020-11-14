@@ -6,6 +6,7 @@
 git clone git@github.com:r-manta/reactNative-onBoardingAnimation.git
 ```
 
+
 2. Installation
 
 Using npm:
@@ -19,6 +20,7 @@ or using yarn:
 ```shell
 yarn install
 ```
+
 
 3. Have Fun
 
